@@ -1,5 +1,5 @@
 from bear import *
-bear1=animals.bear(1,2,3)#bear1=cat("name","weightFoodConsumed","age")
+bear1=bear(1,2,3)#bear1=cat("name","weightFoodConsumed","age")
 bear1.doSoud()
 bear1.play()
 #bear1.eat()
