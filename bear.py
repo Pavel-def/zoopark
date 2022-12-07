@@ -1,8 +1,4 @@
 class animals:
-
-
-
-
     class bear:
 
         def __init__(self,name,weightFoodConsumed,age):
@@ -25,8 +21,6 @@ class animals:
 
         def play(self):
             print("*", self.__name, "играет*")
-
-
         @property
         def Age(self):
             return self.__age
@@ -45,11 +39,6 @@ class animals:
         @property
         def Name(self):
             return self.__name
-
-
-
-
-
     class cat:
 
         def __init__(self, name, weightFoodConsumed, age):
