@@ -1,4 +1,4 @@
-class bear:
+class bear():
     def __init__(self,name,weightFoodConsumed,age):
         self.__name=name
         self.__biome="taiga"

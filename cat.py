@@ -1,5 +1,6 @@
-class cat:
+class cat(animalsBase):
     def __init__(self, name, weightFoodConsumed, age):
+        super(cat, self).__init__(self, name, weightFoodConsumed, age)
         self.__name = name
         self.__biome = "taiga"
         self.__eating = "рыба", "мясо"
