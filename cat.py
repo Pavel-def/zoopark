@@ -1,3 +1,4 @@
+from animalsBase import *
 class cat(animalsBase):
     def __init__(self, name, weightFoodConsumed, age):
         super(cat, self).__init__(self, name, weightFoodConsumed, age)
