@@ -1,19 +1,20 @@
 class animals:
+
     def __init__(self,name,weightFoodConsumed,age):
         self._name=name
-        self._biome= ""
-        self._eating= ""
+        self._biome= "1_"
+        self._eating= ["2_"]
         self._predator=True
-        self._sound= ""
+        self._sound= "3_"
         self.weightFoodConsumed=weightFoodConsumed
         self._age=age
-
     def eat(self, sfoodType):
         if (sfoodType in self._eating):
             print(self._name, ": Я покушал", sfoodType)
         else:
             print(self._name, ": Я не буду", sfoodType)
-
+    def doSoud(self):
+        print(self._sound)
     def play(self):
         print("*", self._name, "играет*")
     @property
@@ -34,3 +35,20 @@ class animals:
     @property
     def Name(self):
         return self._name
+    @property
+    def Age(self):
+        return self._age
+
+    @Age.setter
+    def ReAge(self, valve):
+        if type(valve) is int and (valve >= 0):
+            self._age=valve
+        else:
+            print("нельзя сменить возрост на строку или дробь или на число < 0")
+
+    @Name.setter
+    def ReName(self, valve):
+        if type(valve) == str:
+            self._name = valve
+        else:
+            print("ТОЛЬКО БУКВЫ !!!!!!")
