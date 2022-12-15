@@ -1,10 +1,12 @@
 class animals:
 
     def __init__(self,name,weightFoodConsumed,age):
+        self._type=""
         self._name=name
         self._biome= "1_"
         self._eating= ["2_"]
         self._predator=True
+        self._square = "12"
         self._sound= "3_"
         self.weightFoodConsumed=weightFoodConsumed
         self._age=age
@@ -38,6 +40,9 @@ class animals:
     @property
     def Age(self):
         return self._age
+    @property
+    def Square(self):
+        return self._square
 
     @Age.setter
     def ReAge(self, valve):
