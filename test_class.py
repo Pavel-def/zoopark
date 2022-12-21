@@ -21,7 +21,7 @@ v.Animals_list
 
 print("")
 
-v.feed("мясо",2)
+v.feed("хуй",6)
 
 print("")
 

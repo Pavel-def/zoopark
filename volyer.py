@@ -84,9 +84,10 @@ class volyer:
         #print(self.__temp_food)
         eat_shortage=0
         for i in self.Animals:
+            q=i._eating
             if i._sieve:
                 print(i._type,i._name,"наелся")
             else:
                 print(i._type,i._name,"не наелся")
                 eat_shortage=eat_shortage+i._weightFoodConsumed
-        print("нужно:",eat_shortage-self.__temp_food,self.__food_type)
+        print("нужно:",eat_shortage-self.__temp_food,q)
