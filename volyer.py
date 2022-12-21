@@ -55,7 +55,7 @@ class volyer:
                     #print("1     1 - amount_food", amount_food, "self.__temp_food", self.__temp_food)
                     self.__temp_food=self.__temp_food + amount_food
                     amount_food=0
-                    #print("2     1 - amount_food",amount_food,"self.__temp_food",self.__temp_food)
+                    print("2     1 - amount_food",amount_food,"self.__temp_food",self.__temp_food)
             else:
                 print("     Мы не будем есть:", foodType)
        #print("q",q)

@@ -2,7 +2,7 @@ from importAll import *
 
 print("")
 
-v = volyer(1, "taiga", 1000)
+v = volyer(1, "equals", 1000)
 bear1 = bear(1, 2, 3)
 bear2 = bear(11, 2, 3)
 bear3 = bear(111, 2, 3)
@@ -10,9 +10,9 @@ sheep = sheep(1111, 2, 3)
 
 print("")
 
-v.Add_Animal(bear1)
-v.Add_Animal(bear2)
-v.Add_Animal(bear3)
+#v.Add_Animal(bear1)
+#v.Add_Animal(bear2)
+#v.Add_Animal(bear3)
 v.Add_Animal(sheep)
 v.Animals_list
 #v.Remove_Animal(sheep)
