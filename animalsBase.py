@@ -8,15 +8,16 @@ class animals:
         self._predator=True
         self._square = "12"
         self._sound= "3_"
-        self.weightFoodConsumed=weightFoodConsumed
+        self._weightFoodConsumed=weightFoodConsumed
         self._age=age
+        self._sieve = False
     def eat(self, sfoodType):
         if (sfoodType in self._eating):
-            print(self._name, ": Я покушал", sfoodType)
+            print(self._name, ": съел", sfoodType)
         else:
-            print(self._name, ": Я не буду", sfoodType)
+            print(self._name, ": не будет", sfoodType)
     def doSoud(self):
-        print(self._sound)
+        print(self._sound,self._name)
     def play(self):
         print("*", self._name, "играет*")
     @property

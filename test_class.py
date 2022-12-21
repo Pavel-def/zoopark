@@ -1,10 +1,35 @@
 from importAll import *
-v = volyer(1,"taiga",1000)
-a= bear(11,22, 33)
-b= sheep(111,222, 333)
 
-v.add= a
-v.add= b
+print("")
+
+v = volyer(1, "taiga", 1000)
+bear1 = bear(1, 2, 3)
+bear2 = bear(11, 2, 3)
+bear3 = bear(111, 2, 3)
+sheep = sheep(1111, 2, 3)
+
+print("")
+
+v.Add_Animal(bear1)
+v.Add_Animal(bear2)
+v.Add_Animal(bear3)
+v.Add_Animal(sheep)
+v.Animals_list
+#v.Remove_Animal(sheep)
+#v.Remove_Animal(bear3)
+#v.Animals_list
+
+print("")
+
+v.feed("мясо",2)
+
+print("")
+
+v.feed_info
+
+print("")
+
+v.do_All_Sound
 
 #from bear import *
 #animals=bear(11,22, 33)
