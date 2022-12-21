@@ -12,16 +12,19 @@ class volyer:
         self.__food_type = ""
 
     def Add_Animal(self,Animal:animals):
-        if Animal._predator == True and len(self.Animals) == 0 and self.__square-Animal._square:
-            self.__predatorType1 = True
-            self.__predatorType2 = Animal._type
+        #if Animal._predator == True and len(self.Animals) == 0 and self.__square-Animal._square >= 0:
+            #self.__predatorType1 = True
+            #self.__predatorType2 = Animal._type
+            #print("1+ self.__predatorType2",self.__predatorType2) #хз но это штука довала баг
         if Animal._predator == self.__predatorType1 and Animal._biome == self.__biome:
+
             if Animal._predator == True and Animal._type == self.__predatorType2:
                 self.Animals.append(Animal)
                 print("живатное",Animal._type ,"успешно импортировано")
             elif Animal._predator == True:
                 print("ошибка живатное",Animal._type ,"не импортировано")
             else:
+                print("живатное",Animal._type ,"успешно импортировано")
                 self.Animals.append(Animal)
         else:
             print("ошибка живатное",Animal._type ,"не импортировано")
@@ -37,7 +40,7 @@ class volyer:
                     continue
                 if amount_food+self.__temp_food == 0:
                     #print("     0 + еда кончилась amount_food",amount_food,"self.__temp_food",self.__temp_food)
-                    print("     еда кончилась")
+                    print("еда кончилась")
                     break
                 if (self.__temp_food+amount_food)-i._weightFoodConsumed >= 0:
                     i.eat(foodType)
@@ -55,9 +58,9 @@ class volyer:
                     #print("1     1 - amount_food", amount_food, "self.__temp_food", self.__temp_food)
                     self.__temp_food=self.__temp_food + amount_food
                     amount_food=0
-                    print("2     1 - amount_food",amount_food,"self.__temp_food",self.__temp_food)
+                    #print("2     1 - amount_food",amount_food,"self.__temp_food",self.__temp_food)
             else:
-                print("     Мы не будем есть:", foodType)
+                print("Мы не будем есть:", foodType)
        #print("q",q)
 
     def Remove_Animal(self,Animal:animals):
@@ -91,3 +94,14 @@ class volyer:
                 print(i._type,i._name,"не наелся")
                 eat_shortage=eat_shortage+i._weightFoodConsumed
         print("нужно:",eat_shortage-self.__temp_food,q)
+
+    @property
+    def info_all(self):
+        print("self.__name",self.__name)
+        print("self.Animals", self.Animals)
+        print("self.__biome",self.__biome)
+        print("self.__square", self.__square)
+        print("self.__predatorType1", self.__predatorType1)
+        print("self.__predatorType2", self.__predatorType2)
+        print("self.__temp_food", self.__temp_food)
+        print("self.__food_type", self.__food_type)
