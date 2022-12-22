@@ -20,14 +20,16 @@ class volyer:
 
             if Animal._predator == True and Animal._type == self.__predatorType2:
                 self.Animals.append(Animal)
-                print("живатное",Animal._type ,"успешно импортировано")
+                temp=str(Animal._type)
+                print("\033[32m{}".format("живатное"),"\033[32m{}".format(temp) ,"\033[32m{}".format("успешно импортировано"),"\033[0m{}".format(""))
             elif Animal._predator == True:
-                print("ошибка живатное",Animal._type ,"не импортировано")
+                print("\033[31m{}".format("ошибка живатное"), "\033[31m{}".format(Animal._type),"\033[31m{}".format("не импортировано"), "\033[0m{}".format(""))
             else:
-                print("живатное",Animal._type ,"успешно импортировано")
+                temp = str(Animal._type)
+                print("\033[32m{}".format("живатное"),"\033[32m{}".format(temp) ,"\033[32m{}".format("успешно импортировано"),"\033[0m{}".format(""))
                 self.Animals.append(Animal)
         else:
-            print("ошибка живатное",Animal._type ,"не импортировано")
+            print("\033[31m{}".format("ошибка живатное"),"\033[31m{}".format(Animal._type) ,"\033[31m{}".format("не импортировано"),"\033[0m{}".format(""))
 
     def feed(self,foodType,amount_food):
         #q=0
@@ -40,7 +42,7 @@ class volyer:
                     continue
                 if amount_food+self.__temp_food == 0:
                     #print("     0 + еда кончилась amount_food",amount_food,"self.__temp_food",self.__temp_food)
-                    print("еда кончилась")
+                    print("\033[31m{}".format("еда кончилась"))
                     break
                 if (self.__temp_food+amount_food)-i._weightFoodConsumed >= 0:
                     i.eat(foodType)
@@ -60,15 +62,15 @@ class volyer:
                     amount_food=0
                     #print("2     1 - amount_food",amount_food,"self.__temp_food",self.__temp_food)
             else:
-                print("Мы не будем есть:", foodType)
+                print("\033[31m{}".format("Мы не будем есть:"), "\033[31m{}".format(foodType),"\033[0m{}".format(""))
        #print("q",q)
 
     def Remove_Animal(self,Animal:animals):
         if Animal in self.Animals:
             self.Animals.remove(Animal)
-            print("животное",Animal._name ,"удалено")
+            print("\033[32m{}".format("животное"),"\033[32m{}".format(Animal._name) ,"\033[32m{}".format("удалено"),"\033[0m{}".format(""))
         else:
-            print("ошибка живатное",Animal._type ,"не удалено")
+            print("\033[31m{}".format("ошибка живатное"),"\033[31m{}".format(Animal._type) ,"\033[31m{}".format("не удалено"),"\033[0m{}".format(""))
 
     @property
     def do_All_Sound(self):
@@ -80,7 +82,7 @@ class volyer:
     @property
     def Animals_list(self):
         for i in self.Animals:
-            print(i._name,":",i._type)
+            print("\033[36m{}".format(i._name),"\033[36m{}".format(":"),"\033[36m{}".format(i._type),"\033[0m{}".format(""))
 
     @property
     def feed_info(self):
@@ -89,19 +91,19 @@ class volyer:
         for i in self.Animals:
             q=i._eating
             if i._sieve:
-                print(i._type,i._name,"наелся")
+                print("\033[32m{}".format(i._type),"\033[32m{}".format(i._name),"\033[32m{}".format("наелся"),"\033[0m{}".format(""))
             else:
-                print(i._type,i._name,"не наелся")
+                print("\033[31m{}".format(i._type),"\033[31m{}".format(i._name),"\033[31m{}".format("не наелся"),"\033[0m{}".format(""))
                 eat_shortage=eat_shortage+i._weightFoodConsumed
-        print("нужно:",eat_shortage-self.__temp_food,q)
+        print("\033[31m{}".format("нужно:"),"\033[31m{}".format(eat_shortage-self.__temp_food),"\033[31m{}".format(q),"\033[0m{}".format(""))
 
     @property
     def info_all(self):
-        print("self.__name",self.__name)
-        print("self.Animals", self.Animals)
-        print("self.__biome",self.__biome)
-        print("self.__square", self.__square)
-        print("self.__predatorType1", self.__predatorType1)
-        print("self.__predatorType2", self.__predatorType2)
-        print("self.__temp_food", self.__temp_food)
-        print("self.__food_type", self.__food_type)
+        print("\033[36m{}".format("self.__name"),"\033[31m{}".format("\033[31m{}".format(self.__name),"\033[0m{}".format("")))
+        print("\033[36m{}".format("self.Animals"), "\033[31m{}".format(self.Animals),"\033[0m{}".format(""))
+        print("\033[36m{}".format("self.__biome"),"\033[31m{}".format(self.__biome),"\033[0m{}".format(""))
+        print("\033[36m{}".format("self.__square"), "\033[31m{}".format(self.__square),"\033[0m{}".format(""))
+        print("\033[36m{}".format("self.__predatorType1"), "\033[31m{}".format(self.__predatorType1),"\033[0m{}".format(""))
+        print("\033[36m{}".format("self.__predatorType2"), "\033[31m{}".format(self.__predatorType2),"\033[0m{}".format(""))
+        print("\033[36m{}".format("self.__temp_food"), "\033[31m{}".format(self.__temp_food),"\033[0m{}".format(""))
+        print("\033[36m{}".format("self.__food_type"), "\033[31m{}".format(self.__food_type),"\033[0m{}".format(""))

@@ -5,7 +5,7 @@ bear1 = bear(1, 2, 3)
 bear2 = bear(11, 2, 3)
 bear3 = bear(111, 2, 3)
 sheep1 = sheep(1111, 2, 3)
-sheep2 = sheep(1111, 2, 3)
+sheep2 = sheep(11111, 2, 3)
 
 print("")
 
@@ -27,7 +27,7 @@ v.feed("сухпай",6)
 
 print("")
 
-v.feed("трава",6)
+v.feed("трава",2)
 
 print("")
 
