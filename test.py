@@ -8,5 +8,8 @@ print(L_C_Base(456))
 b="gfkldgf"
 a=str(45564)+b+str(456)
 print(L_C_Red(a))
+print(L_C_Blue(a))
+
+
 
 # попытка не пытка атавизм

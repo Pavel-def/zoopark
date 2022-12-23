@@ -12,10 +12,6 @@ class volyer:
         self.__food_type = ""
 
     def Add_Animal(self,Animal:animals):
-        #if Animal._predator == True and len(self.Animals) == 0 and self.__square-Animal._square >= 0:
-            #self.__predatorType1 = True
-            #self.__predatorType2 = Animal._type
-            #print("1+ self.__predatorType2",self.__predatorType2) #хз но это штука довала баг
         if Animal._predator == self.__predatorType1 and Animal._biome == self.__biome:
 
             if Animal._predator == True and Animal._type == self.__predatorType2:
