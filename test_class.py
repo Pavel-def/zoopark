@@ -1,6 +1,6 @@
 from importAll import *
 
-v = volyer(1,"equals", 1000)
+v = volyer(1,"taiga", 1000)
 bear1 = bear(1, 2, 3)
 bear2 = bear(11, 2, 3)
 bear3 = bear(111, 2, 3)
@@ -40,6 +40,8 @@ v.do_All_Sound
 print("")
 
 v.info_all
+
+print("")
 #from bear import *
 #animals=bear(11,22, 33)
 #animals.doSoud()
@@ -59,8 +61,10 @@ v.info_all
 #animals.ReName="gjgjg"
 #print(animals.Name)
 #print(animals.Square)
-
-
+vr = volyer(1,"taiga", 1000)
+sheep21 = sheep(1111, 2, 3)
+vr.Add_Animal(sheep21)
+vr.info_all
 
 
 
